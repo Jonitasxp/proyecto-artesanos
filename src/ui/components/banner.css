@@ -1,0 +1,35 @@
+.banner {
+  height: 70vh;
+  background: url("https://images.unsplash.com/photo-1602526217037-aae8b2398c8e") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.banner-content p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.btn-banner {
+  background: #ff6600;
+  padding: 12px 25px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-banner:hover {
+  background: #e35600;
+}
