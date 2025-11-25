@@ -46,3 +46,106 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/* --- Estilos Panel Administrador --- */
+.admin-layout {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1em;
+}
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 1.1em;
+}
+.stat-value {
+    font-weight: 600;
+    color: #3C2F2F;
+}
+.impacto-social { color: #7B442A; }
+.arrow-icon { color: #999; }
+
+/* --- Estilos Carrito de Compras --- */
+.shopping-cart-layout {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.shopcart-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.cart-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+.cart-item {
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+.cart-item-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.qty-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+.qty-control button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.checkout-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #C0794F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.order-summary {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 25px;
+}
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .admin-grid, .cart-content-grid { grid-template-columns: 1fr; }
+}
