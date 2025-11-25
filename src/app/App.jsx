@@ -1,39 +1,53 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// Importación de Componentes UI (Ajusta la cantidad de ../ según donde esté este archivo)
-// Si este archivo está en src/App.jsx, usa './ui/...'
-// Si está en src/app/routes/App.jsx, usa '../../ui/...'
-import Navbar from '../ui/components/Navbar'; 
-import Banner from '../ui/components/Banner';
-import Footer from '../ui/components/Footer';
+// === Importación de componentes UI ===
+import Navbar from '../ui/components/navbar.jsx';
+import Footer from '../ui/components/footer.jsx';
+import Banner from '../ui/components/banner.jsx';
 
-// Importación de las Vistas Nuevas
-import AdminPanel from '../ui/views/AdminPanel';
-import ShoppingCart from '../ui/views/ShoppingCart';
-
+// === Importación de Vistas ===
+import AdminPanel from '../ui/views/AdminPanel.jsx';
+import ShoppingCart from '../ui/views/ShoppingCart.jsx';  // Pantalla "Gracias por tu compra"
+import Catalogo from '../ui/views/Catalogo.jsx';           // Catálogo de productos
 function App() {
   return (
     <>
-      {/* El Navbar siempre visible */}
+      {/* Navbar siempre visible */}
       <Navbar />
 
-      {/* Área de contenido cambiante */}
+      {/* Rutas de la aplicación */}
       <Routes>
-        {/* Ruta Home: Muestra el Banner */}
+        {/* Home */}
         <Route path="/" element={<Banner />} />
 
-        {/* Ruta Admin: Muestra el Panel creado */}
+        {/* Catálogo */}
+        <Route path="/catalogo" element={<Catalogo />} />
+
+        {/* Panel Admin */}
         <Route path="/admin" element={<AdminPanel />} />
 
-        {/* Ruta Carrito: Muestra el Carrito creado */}
-        <Route path="/cart" element={<ShoppingCart />} />
-        
-        {/* Ruta para capturar errores 404 (opcional) */}
-        <Route path="*" element={<h2 style={{textAlign:'center', margin:'50px'}}>Página no encontrada</h2>} />
+        {/* Carrito / Pantalla Gracias */}
+        <Route path="/gracias" element={<ShoppingCart />} />
+
+        {/* 404 NOT FOUND */}
+        <Route
+          path="*"
+          element={
+            <h2
+              style={{
+                textAlign: 'center',
+                margin: '50px',
+                fontFamily: 'Inter',
+              }}
+            >
+              Página no encontrada
+            </h2>
+          }
+        />
       </Routes>
 
-      {/* El Footer siempre visible */}
+      {/* Footer siempre visible */}
       <Footer />
     </>
   );
