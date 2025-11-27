@@ -1,0 +1,141 @@
+/* ProductPage.css */
+
+/* Contenedor principal para aislar los estilos y evitar conflictos */
+.product-page-container {
+  background-color: #F7F2E8; /* Color crema de fondo */
+  color: #3D2E25; /* Texto café oscuro */
+  font-family: sans-serif;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Tipografía */
+h1, h2, h3 {
+  font-family: 'Times New Roman', serif; /* Serif para títulos */
+}
+
+/* Grid principal (Imagen vs Info) */
+.product-grid {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+/* Responsividad para celular */
+@media (max-width: 768px) {
+  .product-grid {
+    flex-direction: column;
+  }
+}
+
+/* Imagen del producto */
+.product-image-container {
+  flex: 1;
+  background-color: #EBE5D9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Información del producto */
+.product-info {
+  flex: 1;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #2A1E17;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Selector de cantidad */
+.quantity-selector {
+  margin-bottom: 1.5rem;
+}
+
+.quantity-select {
+  width: 100px;
+  padding: 10px;
+  background-color: #F2ECE1;
+  border: 1px solid #D4C5B0;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Botón Añadir */
+.add-to-cart-btn {
+  width: 100%;
+  background-color: #B85C12; /* Color ladrillo */
+  color: white;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #9A4D0F;
+}
+
+/* Sección Artesano */
+.artisan-section {
+  margin-top: 2rem;
+}
+
+.artisan-card {
+  background-color: #F2ECE1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+
+.artisan-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Productos Relacionados */
+.related-section {
+  border-top: 1px solid #D4C5B0;
+  padding-top: 2rem;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.related-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
