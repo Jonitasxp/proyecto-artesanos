@@ -11,6 +11,10 @@ import Footer from '../ui/components/Footer';
 // Importación de las Vistas Nuevas
 import AdminPanel from '../ui/views/AdminPanel';
 import ShoppingCart from '../ui/views/ShoppingCart';
+import ProductPage from '../ui/views/ProductPage';
+import Dashboard from '../ui/views/Dashboard';
+import Home from '../ui/views/Home';
+
 
 function App() {
   return (
@@ -28,6 +32,15 @@ function App() {
 
         {/* Ruta Carrito: Muestra el Carrito creado */}
         <Route path="/cart" element={<ShoppingCart />} />
+
+                {/* Ruta Carrito: Muestra el Carrito creado */}
+        <Route path="/home" element={<Home />} />
+
+                {/* Ruta Carrito: Muestra el Carrito creado */}
+        <Route path="/producto" element={<ProductPage />} />
+
+                {/* Ruta Carrito: Muestra el Carrito creado */}
+        <Route path="/dash" element={<Dashboard />} />
         
         {/* Ruta para capturar errores 404 (opcional) */}
         <Route path="*" element={<h2 style={{textAlign:'center', margin:'50px'}}>Página no encontrada</h2>} />

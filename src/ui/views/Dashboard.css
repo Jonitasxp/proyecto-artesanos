@@ -1,0 +1,260 @@
+/* Dashboard.css */
+
+/* Variables de color para mantener el estilo */
+:root {
+  --bg-cream: #F9F7F2;
+  --bg-white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-gray: #666666;
+  --accent-gold: #F0E6D2; /* Color de fondo del menú seleccionado */
+  --border-color: #E5E5E5;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-cream);
+  font-family: sans-serif;
+  color: var(--text-dark);
+}
+
+/* --- SIDEBAR (Barra Lateral) --- */
+.sidebar {
+  width: 280px;
+  background-color: var(--bg-cream);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  flex-shrink: 0; /* Evita que se encoja */
+}
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.profile-name {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: var(--text-gray);
+  transition: all 0.3s;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-item:hover {
+  background-color: rgba(0,0,0,0.03);
+  color: var(--text-dark);
+}
+
+.nav-item.active {
+  background-color: var(--accent-gold);
+  color: var(--text-dark);
+  font-weight: 500;
+  border-right: 3px solid #CCA43B;
+}
+
+/* --- MAIN CONTENT (Derecha) --- */
+.dashboard-content {
+  flex: 1;
+  padding: 2rem 3rem;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.menu-btn-mobile {
+  display: none; /* Oculto en PC */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* Tarjeta de Productos */
+.card {
+  background-color: var(--bg-white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.product-item:last-child {
+  border-bottom: none;
+}
+
+.product-info-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #eee;
+}
+
+.product-name {
+  font-weight: 500;
+  margin: 0;
+}
+
+.product-sub {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 1rem;
+  background-color: transparent;
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #FAFAFA;
+}
+
+/* Grid Inferior (Estadísticas, Historia, etc.) */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.stat-sub {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+}
+
+/* --- RESPONSIVE (Celular) --- */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding-top: 1rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  /* Ocultar menú en móvil por defecto si quisieras, pero aquí lo dejaremos visible estilo acordeón o pila */
+  .profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .profile-img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    overflow-x: auto; /* Scroll horizontal en menú móvil */
+    padding-bottom: 10px;
+  }
+  
+  .nav-item {
+    white-space: nowrap;
+    padding: 0.8rem 1rem;
+  }
+
+  .dashboard-content {
+    padding: 1.5rem;
+  }
+
+  .dashboard-title {
+    font-size: 1.8rem;
+  }
+  
+  .dashboard-grid {
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+  }
+}
