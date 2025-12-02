@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -13,10 +14,18 @@ export default function Navbar() {
       </button>
 
       <ul className={open ? "menu open" : "menu"}>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Conócenos</a></li>
-        <li><a href="#">Suscripciones</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li>
+          <Link to="/home" onClick={() => setOpen(false)}>Inicio</Link>
+        </li>
+        <li>
+          <Link to="/catalogo" onClick={() => setOpen(false)}>Catalogo</Link>
+        </li>
+        <li>
+          <Link to="/admin" onClick={() => setOpen(false)}>Dashboard</Link>
+        </li>
+        <li>
+          <Link to="/Login" onClick={() => setOpen(false)}>Login o Register</Link>
+        </li>
       </ul>
     </nav>
   );

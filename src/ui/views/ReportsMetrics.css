@@ -1,0 +1,142 @@
+/* ReportsMetrics.css */
+
+.reports-container {
+  min-height: 100vh;
+  background-color: #FAF7F2; /* Fondo crema suave */
+  padding: 3rem;
+  font-family: sans-serif;
+  color: #1A1A1A;
+}
+
+.reports-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #3D2E25;
+}
+
+/* --- KPIs (Tarjetas Superiores) --- */
+.metrics-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-kpi-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  border: 1px solid #EAEAEA;
+}
+
+.kpi-label-text {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.kpi-number-text {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+/* --- TARJETA PRINCIPAL (Dashboard) --- */
+.dashboard-main-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #EAEAEA;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  
+  /* Grid interno de 3 columnas */
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr; /* La columna del gráfico es un poco más ancha */
+  gap: 3rem;
+}
+
+/* Títulos de secciones internas */
+.section-header {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #1A1A1A;
+  font-weight: 500;
+}
+
+/* Listas */
+.simple-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.simple-list li {
+  margin-bottom: 0.8rem;
+  color: #333;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Bullets personalizados para las listas de categorías */
+.bullet-list li::before {
+  content: "•";
+  color: #3D2E25;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Tabla simple (Impacto Social) */
+.impact-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.impact-name {
+  color: #333;
+}
+
+.impact-val {
+  color: #1A1A1A;
+  font-weight: 500;
+}
+
+/* Contenedor del Gráfico */
+.chart-wrapper {
+  height: 200px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Espaciado extra para separar el gráfico de la lista inferior */
+.chart-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .metrics-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .dashboard-main-card {
+    grid-template-columns: 1fr; /* Una sola columna en tablets/móvil */
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .metrics-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
