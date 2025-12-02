@@ -1,0 +1,134 @@
+/* ReviewBuyers.css */
+
+.review-buyers-container {
+  min-height: 100vh;
+  background-color: #FFFCF5; /* Fondo crema */
+  padding: 3rem;
+  font-family: sans-serif;
+  color: #1A1A1A;
+}
+
+.page-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  color: #1A1A1A;
+}
+
+/* --- TARJETAS DE MÉTRICAS (Arriba) --- */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.metric-card {
+  background-color: white;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.metric-label {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: normal; /* El diseño usa fuente normal, no bold */
+  margin: 0;
+  color: #1A1A1A;
+}
+
+/* --- TABLA DE COMPRADORES --- */
+.table-card {
+  background-color: white;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  overflow: hidden; /* Para que los bordes redondeados recorten la tabla */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.buyers-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.buyers-table th {
+  padding: 1.5rem;
+  background-color: white;
+  font-weight: normal;
+  color: #1A1A1A;
+  border-bottom: 1px solid #F0F0F0;
+  font-size: 1rem;
+}
+
+.buyers-table td {
+  padding: 1.5rem;
+  border-bottom: 1px solid #F0F0F0;
+  color: #333;
+  vertical-align: middle;
+}
+
+.buyers-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- BADGES (Etiquetas de Rol y Estado) --- */
+.badge {
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+/* Rol: Comprador (Beige) */
+.badge-role {
+  background-color: #F3E5D0; 
+  color: #3D2E25;
+}
+
+/* Estado: Activo (Verde muy suave) */
+.badge-active {
+  background-color: #E6F4EA; 
+  color: #1E4620;
+}
+
+/* Estado: Suspendido (Gris/Beige oscuro) */
+.badge-suspended {
+  background-color: #EBEBEB; 
+  color: #333;
+}
+
+/* --- BOTONES DE ACCIÓN --- */
+.btn-action {
+  background-color: white;
+  border: 1px solid #D1D1D1;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.2s;
+  white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.btn-action:hover {
+  background-color: #F5F5F5;
+  border-color: #999;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table-card {
+    overflow-x: auto; /* Scroll horizontal si la tabla no cabe */
+  }
+}

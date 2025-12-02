@@ -1,0 +1,84 @@
+.aslist-page {
+  min-height: 100vh;
+  background: #fdf6ee;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px 16px;
+}
+
+.aslist-card {
+  max-width: 950px;
+  width: 100%;
+  background: #fff;
+  border-radius: 22px;
+  padding: 32px 40px;
+  margin-top: 24px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.06);
+}
+
+.aslist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.aslist-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #3b2a20;
+}
+
+.aslist-add-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  background: #d67b2c;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.aslist-table-wrap {
+  border-radius: 18px;
+  border: 1px solid #e4d7c7;
+  overflow: hidden;
+}
+
+.aslist-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.aslist-table thead {
+  background: #f8efe4;
+}
+
+.aslist-table th,
+.aslist-table td {
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #e4d7c7;
+  text-align: left;
+}
+
+.aslist-table th {
+  font-weight: 500;
+  color: #7b6a59;
+}
+
+.aslist-btn-small,
+.aslist-btn-danger {
+  border-radius: 999px;
+  border: 1px solid #e4d7c7;
+  padding: 7px 14px;
+  font-size: 0.88rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.aslist-btn-danger {
+  border-color: #c4421e;
+  color: #c4421e;
+}

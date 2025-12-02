@@ -1,0 +1,170 @@
+/* PaymentManagement.css */
+
+.payments-container {
+  min-height: 100vh;
+  background-color: #FFFFFF; /* En esta imagen el fondo parece blanco puro, o muy cercano */
+  padding: 3rem;
+  font-family: sans-serif;
+  color: #1A1A1A;
+}
+
+.page-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1A1A1A;
+}
+
+/* --- TARJETAS SUPERIORES (KPIs) --- */
+.kpi-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.pay-kpi-card {
+  background-color: white;
+  border: 1px solid #EAEAEA;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 160px; /* Altura fija para uniformidad */
+}
+
+.kpi-label-pay {
+  font-size: 1.1rem;
+  color: #1A1A1A;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.kpi-amount-pay {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.2rem;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+/* --- TABLA DE PAGOS --- */
+.pay-table-card {
+  background-color: white;
+  border: 1px solid #EAEAEA;
+  border-radius: 12px;
+  padding: 1rem; /* Padding interno alrededor de la tabla */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.pay-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pay-table th {
+  text-align: left;
+  padding: 1.5rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  font-size: 1.05rem;
+  border-bottom: none; /* La imagen no muestra líneas en el header */
+}
+
+.pay-table td {
+  padding: 1.5rem;
+  border-top: 1px solid #F0F0F0;
+  vertical-align: middle;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* Estilos de celda específicos */
+.artisan-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.artisan-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #E0E0E0;
+}
+
+.artisan-name-text {
+  font-weight: 500;
+}
+
+/* Botones de Acción */
+.btn-pay-action {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 500;
+  border: none;
+  transition: all 0.2s;
+  width: 100%; /* Para que tengan ancho similar */
+  max-width: 180px;
+}
+
+/* Estilo: Marcar como pagado (Marrón) */
+.btn-mark-paid {
+  background-color: #A0522D; /* Tono terracota */
+  color: white;
+}
+
+.btn-mark-paid:hover {
+  background-color: #8B4513;
+}
+
+/* Estilo: Pagar / Aprobar (Blanco con borde) */
+.btn-outline-pay {
+  background-color: white;
+  border: 1px solid #E0E0E0;
+  color: #333;
+}
+
+.btn-outline-pay:hover {
+  background-color: #F9F9F9;
+  border-color: #CCC;
+}
+
+/* Estilo: Pagado (Deshabilitado visualmente) */
+.btn-disabled-pay {
+  background-color: white;
+  border: 1px solid #E0E0E0;
+  color: #333;
+  cursor: default;
+}
+
+/* Footer de la tabla (fechas sueltas) */
+.table-footer-row td {
+  border-top: none;
+  padding-top: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .kpi-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .kpi-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .pay-table-card {
+    overflow-x: auto;
+  }
+}

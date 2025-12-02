@@ -1,0 +1,119 @@
+/* UserManagement.css */
+
+.user-management-container {
+  min-height: 100vh;
+  background-color: #FFFCF5; /* Fondo crema muy claro */
+  padding: 3rem;
+  font-family: sans-serif;
+  color: #3D2E25;
+}
+
+.page-title {
+  font-family: 'Times New Roman', serif;
+  font-size: 3rem;
+  color: #3D2E25;
+  margin-bottom: 2.5rem;
+}
+
+/* --- FILTROS --- */
+.filters-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.filter-select {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 1px solid #E0D6C6;
+  border-radius: 8px;
+  background-color: white;
+  color: #555;
+  min-width: 200px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* --- TABLA --- */
+.table-container {
+  background-color: white; /* O transparente según prefieras, la imagen parece tener fondo blanco o crema muy suave */
+  border-radius: 8px;
+  overflow: hidden; /* Para bordes redondeados */
+  border: 1px solid #F0E6D2;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.users-table th {
+  background-color: #FAF5EB; /* Header color crema */
+  padding: 1.5rem;
+  font-weight: normal;
+  color: #3D2E25;
+  font-size: 1.1rem;
+}
+
+.users-table td {
+  padding: 1.5rem;
+  border-bottom: 1px solid #F0E6D2;
+  color: #1A1A1A;
+}
+
+.users-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- BADGES (Etiquetas de Estado) --- */
+.status-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Colores específicos para cada estado (Estilo Artesanal) */
+.status-active {
+  background-color: #EBE5D9; /* Beige grisáceo */
+  color: #3D2E25;
+}
+
+.status-pending {
+  background-color: #F5E6D3; /* Tono naranja/durazno suave */
+  color: #3D2E25;
+}
+
+.status-suspended {
+  background-color: #F2DCD9; /* Tono rojizo suave */
+  color: #3D2E25;
+}
+
+/* --- ENLACE VER --- */
+.action-link {
+  color: #3D2E25;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.action-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo para tabla */
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto; /* Scroll horizontal en celular */
+  }
+  
+  .filters-container {
+    flex-direction: column;
+  }
+  
+  .filter-select {
+    width: 100%;
+  }
+}

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@500;600;700&display=swap');
+
+:root {
+  --bg-main: #fdf7ee;
+  --text-main: #2b2116;
+  --card-bg: #fff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.catalog-page {
+  background-color: var(--bg-main);
+  display: flex;
+  justify-content: center;
+  padding: 16px 40px 40px;
+  font-family: 'Inter', sans-serif;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px 24px;
+  width: 100%;
+  max-width: 1050px;
+}
+
+/* Tarjeta de producto */
+.product-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-family: 'Playfair Display', serif;
+  margin: 12px 0 4px;
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.product-card .author {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.product-card .price {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Hover efecto */
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px var(--card-shadow);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .catalog-page {
+    padding: 16px 24px 32px;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .catalog-page {
+    padding: 12px 16px 28px;
+  }
+
+  .catalog-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+}

@@ -1,0 +1,133 @@
+/* CONTENEDOR GENERAL */
+.buyer-container {
+  padding: 40px 20px;
+  max-width: 550px;
+  margin: auto;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.buyer-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* FOTO USUARIO */
+.buyer-photo img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.buyer-name {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* TARJETA PRINCIPAL */
+.buyer-card {
+  background: #ffffff;
+  margin-top: 25px;
+  border-radius: 18px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.buyer-section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2d2d2d;
+}
+
+.buyer-section p {
+    color: #000000;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 18px 0;
+}
+
+/* HISTORIAL DE PEDIDOS */
+.order-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #faf5f0;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.order-icon {
+  font-size: 32px;
+  color: #b26b34;
+}
+
+.order-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.order-info p {
+  margin: 3px 0 0 0;
+  color: #000000;
+  font-size: 0.9rem;
+}
+
+.order-link {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #b26b34;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* RECIENTEMENTE VISTO */
+.recent-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.recent-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.recent-item p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* DIRECCIÓN DE ENVÍO */
+.shipping-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shipping-row p{
+    color: #000000;
+}
+
+.edit-link {
+  background: none;
+  border: none;
+  color: #b26b34;
+  cursor: pointer;
+  font-size: 0.95rem;
+  text-decoration: underline;
+}
